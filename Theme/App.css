@@ -65,7 +65,8 @@ body {
 }
 
 .container .side-nav .item.active {
-    background: #4d4d4d;
+    background: #3d3d3d;
+    border: none;
 }
 
 .container .side-nav .item.active a,
