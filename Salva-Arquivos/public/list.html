@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Arquivos</title>
+</head>
+<body>
+    <h1>Lista de Arquivos</h1>
+    <ul id="fileList"></ul>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            fetch('/files')
+                .then(response => response.json())
+                .then(files => {
+                    const fileList = document.getElementById('fileList');
+                    files.forEach(file => {
+                        const li = document.createElement('li');
+                        const a = document.createElement('a');
+                        a.href = `/download/${file}`;
+                        a.textContent = file;
+                        li.appendChild(a);
+                        fileList.appendChild(li);
+                    });
+                })
+                .catch(error => console.error('Erro ao buscar arquivos:', error));
+        });
+    </script>
+</body>
+</html>
