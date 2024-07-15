@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+    font-family: "Ubuntu", sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: #111;
+    font-size: 14px;
+}
+
+p{
+    color: #a4a8ac;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+}
+
+.container {
+    background: #111;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.3s ease;
+}
+
+.container>h2 {
+    font-size: 26px;
+    font-weight: 500;
+    color: #eee;
+}
+
+.container .side-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.container .side-nav .item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 12px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.container .side-nav .item a {
+    color: #a4a8ac;
+    transition: all 0.3s ease;
+}
+
+.container .side-nav .item i {
+    font-size: 20px;
+    color: #a4a8ac;
+    transition: all 0.3s ease;
+}
+
+.container .side-nav .item.active {
+    background: #4d4d4d;
+}
+
+.container .side-nav .item.active a,
+.container .side-nav .item.active i {
+    color: #111;
+    font-weight: bold;
+}
+
+.container .side-nav .item:hover a,
+.container .side-nav .item:hover i{
+    color: #fafafa;
+}
