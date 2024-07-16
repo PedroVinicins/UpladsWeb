@@ -6,4 +6,4 @@ function abriHTML(install){
     if(install === 'files'){
         window.open('http://localhost:3000/list.html','_blank');
     }
-}
+ }

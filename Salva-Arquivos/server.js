@@ -6,7 +6,7 @@ const fs = require('fs');
 const app = express();
 const port = 3000;
 
-// Configuração do multer para armazenar arquivos
+// Multer para armazenar arquivos
 const storage = multer.diskStorage({
     destination: (req, file, cb) => {
         cb(null, 'uploads/');
@@ -18,7 +18,6 @@ const storage = multer.diskStorage({
 
 const upload = multer({ storage: storage });
 
-// Middleware para servir arquivos estáticos
 app.use(express.static(path.join(__dirname, 'public')));
 
 // Rota para upload de arquivos

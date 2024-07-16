@@ -35,7 +35,7 @@ body {
 .container>h2 {
     font-size: 26px;
     font-weight: 500;
-    color: #eee;
+    color: #ffffff;
 }
 
 .container .side-nav {
@@ -54,19 +54,20 @@ body {
 }
 
 .container .side-nav .item a {
-    color: #a4a8ac;
+    color: #ccc;
     transition: all 0.3s ease;
 }
 
 .container .side-nav .item i {
     font-size: 20px;
-    color: #a4a8ac;
+    color: #295179;
     transition: all 0.3s ease;
 }
 
 .container .side-nav .item.active {
-    background: #3d3d3d;
+    background-color: floralwhite;
     border: none;
+    margin: 2px;
 }
 
 .container .side-nav .item.active a,
@@ -77,5 +78,23 @@ body {
 
 .container .side-nav .item:hover a,
 .container .side-nav .item:hover i{
-    color: #fafafa;
+    color: #ff0000;
+}
+
+.container-right{
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100%;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.uploads i ,h2{
+    display: flex;
+    width: 200px;
+    align-items: center;
+    justify-content: center;
+    color: #111;
+    font-size: 200px;
+    transition: all 0.3s ease;
 }
